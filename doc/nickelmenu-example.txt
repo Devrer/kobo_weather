@@ -1,0 +1,27 @@
+Launching Kobo Weather from NickelMenu
+=======================================
+
+The app is a self-contained launcher + supervisor (src/launcher.c) and no
+longer needs run.sh. Install NickelMenu, then create:
+
+    /mnt/onboard/.adds/nm/kobo_weather
+
+with the following content:
+
+    menu_item :main :Väder :cmd_spawn :quiet:/mnt/onboard/.adds/kobo_weather/kobo_weather
+
+Notes:
+  - cmd_spawn passes its argument to `/bin/sh -c`, starting in `/`. The
+    `quiet:` prefix (no space, no extra colon) suppresses NickelMenu's
+    "running PID..." toast. The process gets no useful stdout/stderr, so the
+    app redirects its own logging to
+    /mnt/onboard/.adds/kobo_weather/run.log (previous run is rotated to
+    last_run.log).
+  - To get verbose WiFi/refresh diagnostics in run.log, append --debug to
+    the command line:
+
+      menu_item :main :Väder (debug) :cmd_spawn :quiet:/mnt/onboard/.adds/kobo_weather/kobo_weather --debug
+
+  - The binary chdir()s to its own directory at startup, so it can be placed
+    anywhere under /mnt/onboard — fonts/ and weather.conf are resolved
+    relative to it.

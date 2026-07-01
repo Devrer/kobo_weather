@@ -1,0 +1,7 @@
+*.o
+*.d
+kobo_weather
+ca_bundle.pem
+ca_bundle.h
+test_httpget
+tests/run
