@@ -1,6 +1,6 @@
 # Kobo Weather
 
-A small, native weather app for Kobo e-readers. It shows current conditions,
+A small, native weather app for Kobo e-readers(Clara BW/Colour and Libra colour). It shows current conditions,
 a three-day forecast, and an hour-by-hour breakdown — rendered for e-ink with
 FBInk and launched straight from the home screen via NickelMenu.
 
@@ -16,7 +16,8 @@ only waking up by a timer periodically to fetch fresh weather data and update th
 
 ## Installing
 
-Copy the binary and its assets so the layout is:
+
+With nickelmenu installed, copy the binary and its assets to the /nm-folder so the layout is:
 
 ```
 /mnt/onboard/.adds/nm/kobo_weather/
