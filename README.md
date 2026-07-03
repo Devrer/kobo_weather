@@ -1,5 +1,7 @@
 # Kobo Weather
 
+NOTE1: Entering sleep mode takes about 5 seconds. Pushing the powerbutton in this window will make the sleep-process restart and take another 5 seconds, and the app will hence appear to have frozen. Wait at least 5 seconds before trying to wake the app up by the powerbutton.
+
 A small, native weather app for Kobo e-readers(Clara BW/Colour and Libra colour). It shows current conditions,
 a three-day forecast, and an hour-by-hour breakdown — rendered for e-ink with
 FBInk and launched straight from the home screen via NickelMenu.
